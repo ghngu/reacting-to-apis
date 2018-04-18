@@ -22,7 +22,7 @@ export default class App extends Component {
             .then(films => this.setState({ films }));
         fetch(`${baseUrl}/people`)
             .then(res => { return res.json() })
-            .then(people => this.setState(people));
+            .then(people => this.setState({ people }));
     }
 
     handleClickFilms() {
@@ -40,8 +40,8 @@ export default class App extends Component {
     render() {
         if (this.state.showFilms === true) {
             return (
-                <div className="container-fluid">
-                    <div className="jumbotron-fluid mb-2">
+                <div className="container">
+                    <div className="jumbotron mb-2">
                         <img className="w-100" src="https://www.theedgesusu.co.uk/wp-content/uploads/2016/01/studio_ghibli.jpg" alt="Something went Wrong" />
                     </div>
                     <div className="buttons mb-4 d-flex justify-content-center">
